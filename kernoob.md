@@ -37,7 +37,7 @@ def del_note(arg):
 通过seq_operations来填充note，再通过edit_note修改seq_operations的指针，最终控制程序执行流。
 
 ### 2. modprobe_path
-```c
+```
 1. 设UAF的SLUB为slub1，修改slub1->freelist = slub1^random^target1,
 	target1 = (mod_base ^ random)>>32属于用户空间
 2. alloc(0x60)申请slub1为notei，alloc(0x60)申请到用户空间为notej，因此notej的地址为用户空间
@@ -50,7 +50,7 @@ def del_note(arg):
 6. 执行错误格式的程序，执行fake_script
 ```
 
-```c
+```
 modprobe_tree, poweroff_cmd,Hijack Prctl
 注意给copy.sh和kirin加可执行权限
 ```
