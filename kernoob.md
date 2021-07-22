@@ -1,7 +1,6 @@
 # kernoob
 
 ## IDA
-## IDA
 
 ```python
 """
