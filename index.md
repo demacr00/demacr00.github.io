@@ -10,5 +10,6 @@
 
 ## kernel pwn
 - [d3ctf knote](./knote.html)
+- [kernoob](./kernoob.html)
 
 ![Image](src)
