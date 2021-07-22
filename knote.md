@@ -1,7 +1,7 @@
 # d3ctf knote
 
 ## IDA
-```c
+```python
 def ioctl(fd, cmd, arg):
 	mychunk = arg
 	if cmd == 0x2333:
