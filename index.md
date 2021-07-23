@@ -16,6 +16,7 @@
 - [meow](kernel/meow.html)
 - [notebook](kernel/notebook.html)
 - [spark](kernel/spark.html)
+- [dirtycow](kernel/dirtycow.html)
 
 ## virt pwn
 - [d3ctf chromium](virt/chromium.md)
