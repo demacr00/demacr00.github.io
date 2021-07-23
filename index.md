@@ -17,10 +17,9 @@
 - [notebook](kernel/notebook.html)
 - [spark](kernel/spark.html)
 
-## kernel cve
-
 ## virt pwn
 -[d3ctf chromium](virt/chromium.md)
+-[cve-2020-14364](virt/cve-2020-14364.md)
 
 
 ![Image](src)
